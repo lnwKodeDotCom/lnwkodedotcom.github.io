@@ -6,7 +6,7 @@ tagline: made from experiences
 url: https://ookkabat.github.io/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
-source: src
+#source: src
 destination: serve
 
 # Same as the title etc for your site but can instead be
@@ -42,4 +42,18 @@ markdown: redcarpet
 redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
               'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
-highlighter: true
+highlighter: pygments
+
+# Exclude these files from your production _site
+exclude:
+    - node_modules
+    - site
+    - bower.json
+    - Gemfile
+    - Gemfile.lock
+    - gulpfile.js
+    - package.json
+    - LICENSE
+    - README.md
+
+
