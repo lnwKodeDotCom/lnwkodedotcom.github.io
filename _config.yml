@@ -3,7 +3,7 @@
 title: Ookkabat
 description: Reactive Resources for Meteorized Developers
 tagline: made from experiences
-url: localhost:4000
+url: https://ookkabat.github.io/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 source: src
