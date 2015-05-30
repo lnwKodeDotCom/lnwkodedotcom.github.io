@@ -39,18 +39,18 @@ html, body {
 }
 
 html {
-  font-family: "QuarkLight", Georgia, "Times New Roman", serif;
-  font-size: 1.1rem;
+  font-family: "THBaijam", Georgia, "Times New Roman", serif;
+  font-size: .875rem;
   letter-spacing: .028rem;
 }
 @media (min-width: 38rem) {
   html {
-    font-size: 1.3rem;
+    font-size: 1.025rem;
   }
 }
 @media (min-width: 56rem) {
   html {
-    font-size: 1.5rem;
+    font-size: 1.175rem;
   }
 }
 
@@ -58,7 +58,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "QuarkBold", Helvetica, Arial, sans-serif;
   font-weight: 400;
   color: #313131;
-  letter-spacing: -.025rem;
+  letter-spacing: .15rem;
 }
 
 /*
@@ -113,12 +113,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
   color: #505050;
-  letter-spacing: 0.4rem;
+  letter-spacing: 0.15rem;
   a {
     color: #505050;
   }
   small {
-    font-size: 75%;
+    font-family: "THBaijam", Georgia, "Times New Roman", serif;
+    font-size: 65%;
     font-weight: 400;
     color: #c0c0c0;
     letter-spacing: 0;
@@ -159,8 +160,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
-  font-size: .875rem;
+  letter-spacing: 0.1rem;
+  font-family: "QuarkLight", Helvetica, Arial, sans-serif;
+  font-size: .975rem;
   /* 15px */
   color: rgba(255, 255, 255, 0.6);
   background-color: #202020;
@@ -174,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 30rem) {
   .sidebar {
-    font-size: .75rem;
+    font-size: .975rem;
     /* 14px */
   }
 }
@@ -392,7 +394,7 @@ a.sidebar-nav-item {
   /* clearfix */
   margin-left: -1rem;
   margin-right: -1rem;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: "QuarkLight", Helvetica, Arial, sans-serif;
   color: #ccc;
   text-align: center;
 }

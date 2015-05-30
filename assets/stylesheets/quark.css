@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'QuarkBold';
-    src: url('../fonts/woff/quark-bold-webfont.woff') format('woff');
+    src: url('../fonts/woff/quark1-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'QuarkLight';
-  src: url('../fonts/woff/quark-light-webfont.woff') format('woff');
+  src: url('../fonts/woff/quark1-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
