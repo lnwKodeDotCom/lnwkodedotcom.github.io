@@ -24,7 +24,7 @@ gulp.task("clean:prod", del.bind(null, ["site"]));
 
 // Runs the build command for Jekyll to compile the site locally
 // This will build the site with the production settings
-gulp.task("jekyll:dev", $.shell.task("jekyll build"));
+gulp.task("jekyll:dev", $.shell.task("jekyll build --config _config.yml,_config.dev.yml"));
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   reload();
 });
@@ -32,7 +32,7 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
 // Almost identical to the above task, but instead we load in the build configuration
 // that overwrites some of the settings in the regular configuration so that you
 // don"t end up publishing your drafts or future posts
-gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
+gulp.task("jekyll:prod", $.shell.task("jekyll build"));
 
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
 gulp.task("styles", function () {
@@ -176,7 +176,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod"], function () {});
+gulp.task("build", ["clean:prod", "jekyll:prod"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"

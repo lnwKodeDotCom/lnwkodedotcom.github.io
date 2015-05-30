@@ -1,12 +1,31 @@
+# ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
+#
+#      _____ _ __          _____      __  __  _
+#     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
+#     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+#    ___/ / / /_/  __/   ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
+#   /____/_/\__/\___/   /____/\___/\__/\__/_/_/ /_/\__, /____/
+#                                                 /____/
+#
+# Production Setings
+#
+# Run during the 'gulp build' command, default for github pages.
+
+# GitHub Page Overrides
+#
+#safe: true
+#lsi: false
+#source: your top-level directory
+
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: Ookkabat
-description: Reactive Resources for Meteorized Developers
-tagline: made from experiences
+description: "Reactive Resources for Meteorized Developers"
+tagline: "( made from experiences )"
 url: https://ookkabat.github.io/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
-#source: src
+#source: root directory
 destination: serve
 
 # Same as the title etc for your site but can instead be
@@ -18,27 +37,26 @@ author:
   twitter: https://twitter.com/iamisara
 
 # general setting for Jekyll
-googleAnalytics: UA-XXXXX-X
+#
+# Hides your drafts and future posts
+future: false
+show_drafts: false
 
-# _config.build.yml overwrites these options when you run `gulp build`
-# Enables future posts (posts with dates in the future) and drafts
-future: true
-show_drafts: true
-# Disables the more accurate related posts for faster generating of the site
-lsi: false
-# Only make the last 10 posts so generating isn't slow
-limit_posts: 10
+# Gives you more accurate related posts
+lsi: true
+
+# Removes the upper limit for posts generated
+limit_posts: 0
 
 # Permalink structure and pagination options
 relative_permalinks: true
-permalink: none
+permalink: /:categories/:title/
 paginate: 7
 paginate_path: 'page:num'
 excerpt_separator: '<!--more-->'
 
 # Markdown library
 markdown: redcarpet
-# Markdown library options
 redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
               'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
@@ -56,4 +74,23 @@ exclude:
     - LICENSE
     - README.md
 
+#      _____
+#     / ___/____ ___________
+#     \__ \/ __ `/ ___/ ___/
+#    ___/ / /_/ (__  |__  )     More › http://sass-lang.com/
+#   /____/\__,_/____/____/      More › http://jekyllrb.com/docs/assets/#sassscss
+#
 
+sass:
+    sass_dir: _sass
+    style: :compressed
+
+
+#       ___                __      __  _
+#      /   |  ____  ____ _/ /_  __/ /_(_)_________
+#     / /| | / __ \/ __ `/ / / / / __/ / ___/ ___/
+#    / ___ |/ / / / /_/ / / /_/ / /_/ / /__(__  )
+#   /_/  |_/_/ /_/\__,_/_/\__, /\__/_/\___/____/      https://www.google.com/analytics/
+#                        /____/
+#
+googleAnalytics: UA-XXXXX-X
