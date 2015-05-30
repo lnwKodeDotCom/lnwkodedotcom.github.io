@@ -26,7 +26,7 @@ gulp.task("clean:prod", del.bind(null, ["site"]));
 // This will build the site with the production settings
 gulp.task("jekyll:dev", $.shell.task("jekyll build"));
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
-  reload;
+  reload();
 });
 
 // Almost identical to the above task, but instead we load in the build configuration
@@ -52,7 +52,7 @@ gulp.task("styles", function () {
 
 // Optimizes the images that exists
 gulp.task("images", function () {
-  return gulp.src("src/assets/images/**")
+  return gulp.src("assets/images/**")
     .pipe($.changed("site/assets/images"))
     .pipe($.imagemin({
       // Lossless conversion to progressive JPGs
@@ -66,7 +66,7 @@ gulp.task("images", function () {
 
 // Copy over fonts to the "site" directory
 gulp.task("fonts", function () {
-  return gulp.src("src/assets/fonts/**")
+  return gulp.src("assets/fonts/**")
     .pipe(gulp.dest("site/assets/fonts"))
     .pipe($.size({ title: "fonts" }));
 });
@@ -79,7 +79,7 @@ gulp.task("copy", function () {
 });
 
 // Optimizes all the CSS, HTML and concats the JS etc
-gulp.task("html", ["styles"], function () {
+gulp.task("html", [], function () {
   var assets = $.useref.assets({searchPath: "serve"});
 
   return gulp.src("serve/**/*.html")
@@ -137,7 +137,7 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["jekyll:dev"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
@@ -150,11 +150,10 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
 // These tasks will look for files that change while serving and will auto-regenerate or
 // reload the website accordingly. Update or add other files you need to be watched.
 gulp.task("watch", function () {
-  gulp.watch(["*.md", "_drafts/**/*.md", "_posts/**/*.md",
-              "*.html", "_includes/**/*.html", "_layouts/**/*.html",
-              "*.md", "*.xml", "*.txt", "assets/javascript/**/*.js"], ["jekyll-rebuild"]);
-  gulp.watch(["serve/assets/stylesheets/*.css"], reload);
-  gulp.watch(["src/assets/scss/**/*.scss"], ["styles"]);
+  gulp.watch([ "_includes/**/*.html", "_layouts/**/*.html",
+               "_drafts/**/*.md", "_posts/**/*.md",
+               "_sass/**/*.scss", "assets/javascript/**/*.js",
+               "*.md", "*.html", "*.xml", "*.txt"], ["jekyll-rebuild"]);
 });
 
 // Serve the site after optimizations to see that everything looks fine
@@ -177,7 +176,7 @@ gulp.task("check", ["jslint", "doctor"], function () {
 });
 
 // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "styles"], function () {});
+gulp.task("build", ["jekyll:prod"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
 // it and outputs it to "./site"
