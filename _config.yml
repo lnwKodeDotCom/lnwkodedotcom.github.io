@@ -20,9 +20,9 @@
 # Title, decription, tagline and URL for your site
 # Can be used in your theme by calling 'site.title' and so on
 title: เทพโค้ด ดอท คอม
-description: "ความรู้จากประสบการณ์จริง เพื่อคนไทยทำแอพ"
-tagline: "สอนแอพ แบบอินเทรนด์ เข้มข้น"
-url: https://ookkabat.github.io/
+tagline: "รู้จริง อินเทรนด์ เข้มข้น"
+description: "บล็อกความรู้จากประสบการณ์จริง"
+url: https://lnwkodedotcom.github.io/
 
 # Used so Jekyll outputs the site correctly so Gulp can do what it wants
 #source: root directory
