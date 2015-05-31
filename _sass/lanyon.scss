@@ -123,10 +123,11 @@ h1, h2, h3, h4, h5, h6 {
   small {
     font-family: "Boon-0.6", Georgia, "Times New Roman", serif;
     font-size: 70%;
-    font-weight: 400;
+    font-weight: 500;
     color: #c0c0c0;
     letter-spacing: 0;
-
+    display: block;
+    margin-top: -.1rem;
   }
 }
 
