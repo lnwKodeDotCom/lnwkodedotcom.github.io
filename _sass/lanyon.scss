@@ -204,6 +204,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.sidebar-item-bottom, .sidebar-nav:after {
+  //height: 140px;
+  //position: fixed;
+  //bottom:0%;
+}
+
 /* Sidebar nav */
 
 .sidebar-nav {
