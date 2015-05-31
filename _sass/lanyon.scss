@@ -50,7 +50,7 @@ html {
     font-size: 18px;
   }
 }
-@media only screen and (min-width: 56rem) {
+@media (min-width: 56rem) {
   html {
     //font-size: 1.175rem;
     font-size: 20px;
@@ -252,27 +252,34 @@ a.sidebar-nav-item {
   top: 1rem;
   left: 1rem;
   display: block;
-  width: 2.2rem;
-  padding: .5rem .65rem;
+  //width: 2.2rem;
+  //padding: .5rem .65rem;
+  width: 44px;
+  padding: 8px;
+  line-height: 1;
   color: #505050;
   background-color: #fff;
   border-radius: 4px;
   cursor: pointer;
-  &:before {
-    display: block;
-    content: "";
-    width: 100%;
-    padding-bottom: .125rem;
-    border-top: .375rem double;
-    border-bottom: .125rem solid;
-    /* Make the border inside the box */
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
+  //&:before {
+    //display: block;
+    //content: "";
+    //width: 100%;
+    //padding-bottom: .125rem;
+    //border-top: .375rem double;
+    //border-bottom: .125rem solid;
+    ///* Make the border inside the box */
+    //-webkit-box-sizing: border-box;
+    //-moz-box-sizing: border-box;
+    //box-sizing: border-box;
+  //}
   &:active {
     color: #fff;
     background-color: #505050;
+  }
+
+  span {
+    font-size: 28px;
   }
 }
 
@@ -284,18 +291,18 @@ a.sidebar-nav-item {
 @media (min-width: 48rem) {
   .sidebar-toggle {
     position: fixed;
-    width: 2.25rem;
+    //width: 2.25rem;
   }
 }
-@media (min-width: 56rem) {
-  .sidebar-toggle {
-    &:before {
-      padding-bottom: .15rem;
-      border-top-width: .45rem;
-      border-bottom-width: .15rem;
-    }
-  }
-}
+//@media (min-width: 56rem) {
+//  .sidebar-toggle {
+//    &:before {
+//      padding-bottom: .15rem;
+//      border-top-width: .45rem;
+//      border-bottom-width: .15rem;
+//    }
+//  }
+//}
 
 /* Slide effect
  *
