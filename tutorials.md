@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tutorials
-typcn: mortar-board
+permalink: "/tutorials/"
 ---
 
 ...
