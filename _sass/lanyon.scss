@@ -297,6 +297,12 @@ a.sidebar-nav-item {
   background-color: #505050;
 }
 
+@media (max-width: 38rem) {
+  .sidebar-toggle {
+    padding-top: 6px;
+  }
+}
+
 @media (min-width: 48rem) {
   .sidebar-toggle {
     position: fixed;
