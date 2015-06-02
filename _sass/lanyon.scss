@@ -201,47 +201,70 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar-item {
+
+  h3 {
+    margin: 5px 0px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+
   .copyright {
     font-size: 0.7rem;
+
+    img {
+      display: inline-block;
+      margin-bottom: 5px;
+    }
   }
 
   #mc_embed_signup {
-    h2 {
-      font-size: 0.95rem;
+    h6 {
+      font-size: 80%;
       color: rgba(255, 255, 255, 0.5);
+      margin: 4px 0px;
     }
     input {
       font-family: inherit;
-      width: 100%;
+      line-height: 1.5;
+      margin: 2px 0px;
+      padding: 5px;
+
+      -webkit-appearance: none;
+      appearance: none;
+      box-shadow: none;
+      border-radius: 0;
+
       &[type=email] {
-        padding: 8px;
-        transition: border 0.3s ease 0s;
+        font-size: 0.8rem;
+        width: 100%;
+
         border: 2px solid rgba(255, 255, 255, 0.3);
-        background: #AC4142 none repeat scroll 0% 0%;
+        background-color: #AC4142;
         color: #FFF;
-        font-size: 1rem;
+
+        transition: border 0.3s ease 0s;
+
         &:focus, &.focus {
           border: solid 2px #ffffff;
         }
       }
       &[type=submit] {
-        margin: 2px 0px;
-        padding: 4px;
-        border: none;
-        //border: 2px solid rgba(255, 255, 255, 0.1);
-        background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
-        color: #AC4142;
-        font-weight: bolder;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
         width: 50%;
-        //display: none;
+        border: medium none;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #AC4142;
+
+        &:focus {
+          outline: none;
+        }
+
         &:hover, &.hover {
           background-color: #ffffff;
-          //border-color: #ffffff;
           color: #AC4142;
         }
         &:active, &.active {
           background-color: #c0c0c0;
-          //border-color: #c0c0c0;
           color: #fff;
         }
       }
